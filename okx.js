@@ -1,13 +1,16 @@
 // config
-var labels = ["01","02","03"]
-var wallets = ["0x1","0x2","0x3"]
-var addrPlaceholder = "You can also use a .crypto domain";
-var labelPlaceholder = "e.g. my wallet";
+const labels = ["01","02","03"]
+
+const wallets = ["0x","0x","0x"]
+
+const addrPlaceholder = "You can also use a .crypto domain";
+
+const labelPlaceholder = "e.g. my wallet";
 
 // main
 if (labels.length === wallets.length) {
   function waitForButton(callback) {
-    var counter = 0;
+    let counter = 0;
     var interval = setInterval(() => {
       const button = document.querySelector('.add-address-form-btn');
       if (button && counter < labels.length - 1) {
