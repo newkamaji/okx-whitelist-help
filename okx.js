@@ -11,7 +11,7 @@ const labelPlaceholder = "e.g. my wallet";
 if (labels.length === wallets.length) {
   function waitForButton(callback) {
     let counter = 0;
-    var interval = setInterval(() => {
+    let interval = setInterval(() => {
       const button = document.querySelector('.add-address-form-btn');
       if (button && counter < labels.length - 1) {
         button.click();
@@ -25,8 +25,8 @@ if (labels.length === wallets.length) {
   };
   
   waitForButton(() => {
-    var addrInputs = Array.from(document.querySelectorAll(`input[placeholder="${addrPlaceholder}"]`));
-    var labelInputs = Array.from(document.querySelectorAll(`input[placeholder="${labelPlaceholder}"]`));
+    let addrInputs = Array.from(document.querySelectorAll(`input[placeholder="${addrPlaceholder}"]`));
+    let labelInputs = Array.from(document.querySelectorAll(`input[placeholder="${labelPlaceholder}"]`));
   
     if (addrInputs.length === wallets.length) {
       for(i = 0; i < wallets.length; i++) {
