@@ -21,7 +21,7 @@ if (labels.length === wallets.length) {
         clearInterval(interval);
         callback();
       }
-    }, 500);
+    }, 250);
   };
   
   waitForButton(() => {
