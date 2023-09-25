@@ -1,7 +1,11 @@
 // config
-const labels = ["01","02","03"]
+const labels = ["ID",
+"ID",
+"ID"]
 
-const wallets = ["0x","0x","0x"]
+const wallets = ["Account",
+"Account",
+"Account",]
 
 const addrPlaceholder = "You can also use a .crypto domain";
 
@@ -9,7 +13,7 @@ const labelPlaceholder = "e.g. my wallet";
 
 // main
 if (labels.length === wallets.length) {
-  function waitForButton(callback) {
+  const waitForButton = (callback) => {
     let counter = 0;
     let interval = setInterval(() => {
       const button = document.querySelector('.add-address-form-btn');
@@ -40,7 +44,6 @@ if (labels.length === wallets.length) {
 
       document.getElementsByClassName('okui-checkbox-inner')[0].click()
       document.getElementsByClassName('okui-checkbox-inner')[1].click()
-      
     } else {
         console.error('count of fields and wallets is not the same.');
     }
